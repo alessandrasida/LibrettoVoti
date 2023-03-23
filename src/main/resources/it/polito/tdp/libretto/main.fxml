@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="346.0" prefWidth="561.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.libretto.Controller">
    <top>
       <Label text="Libretto Voti" BorderPane.alignment="CENTER">
          <font>
@@ -13,4 +20,23 @@
          </font>
       </Label>
    </top>
+   <center>
+      <VBox prefHeight="118.0" prefWidth="576.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="64.0" prefWidth="576.0">
+               <children>
+                  <TextField fx:id="txtCorso" promptText="Nome corso" translateX="5.0" />
+                  <ComboBox fx:id="cmbVoti" prefWidth="150.0" translateX="7.0" />
+                  <DatePicker fx:id="selData" translateX="8.0" />
+                  <Button mnemonicParsing="false" onAction="#doInserisci" prefHeight="26.0" prefWidth="70.0" text="Inserisci" translateX="10.0" />
+               </children>
+            </HBox>
+            <TextArea fx:id="txtRisultato" editable="false" prefHeight="202.0" prefWidth="555.0">
+               <VBox.margin>
+                  <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+               </VBox.margin>
+            </TextArea>
+         </children>
+      </VBox>
+   </center>
 </BorderPane>
